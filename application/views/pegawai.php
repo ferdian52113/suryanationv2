@@ -147,7 +147,7 @@
                                 <label for="file-upload" class="custom-file-upload">
                                     <i class="fa fa-cloud-upload"></i> Ubah Gambar
                                 </label>
-                                <input id="file-upload" type="file"/>
+                                <input id="file-upload" type="file" name="userfile" />
                                 <!-- <a href="#" data-toggle="modal" data-target="#ubahGambar<?php echo $p->idUser;?>" class="btn btn-xs btn-default" >Ubah Foto</a> -->
                             </div>
                         </div>
@@ -205,68 +205,7 @@
             <?php endforeach;?>
         </div>
         </div>
-        <!-- Modal -->
-            <div class="modal fade" id="tambahPegawai" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-              <div class="modal-dialog modal-lg" role="document">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                    <h4 class="modal-title" id="myModalLabel">Tambah Pegawai</h4>
-                  </div>
-                  <div class="modal-body">
-                    <?php echo form_open_multipart('user/createPegawai')?>
-                    <div class="form-group">
-                        <div class="row">
-                            
-                                    <div class="col-md-4">
-                                        <label>Nama</label>
-                                        <input type="text" name= "nama"  class="form-control" required>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <label>Jabatan</label>
-                                        <select id="jabatan" class="form-control"  name="jabatan">
-                                            <option value="Admin Produksi">Admin Produksi</option>
-                                            <option value="Staf Sales">Staf Sales</option>
-                                            <option value="Staf Desain">Staf Desain</option>
-                                            <option value="Staf Lilin">Staf Lilin</option>
-                                            <option value="Staf Gips">Staf Gips</option>
-                                            <option value="Staf Cor">Staf Cor</option>
-                                        </select>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <label>No Telepon</label>
-                                        <input type="number" name= "nomorTelepon"  class="form-control" >
-                                    </div>
-                            
-                        </div>
-                        <br>
-                        <div class="row">
-                           
-                                    <div class="col-md-4">
-                                        <label>Username</label>
-                                        <input type="text" name= "username" class="form-control" required>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <label>Password</label>
-                                        <input type="text" name= "password"  class="form-control" required>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <label>Email</label>
-                                        <input type="text" name= "email"  class="form-control">
-                                    </div>
-                           
-                        </div>
-                    </div>
-                  </div>
-                  <div class="modal-footer">
-                    <button class="btn btn-primary" type="submit">Save changes</button>
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                </div>
-                <?php echo form_close()?> 
-                </div>
-              </div>
-            </div>
-            <!-- End of Modal -->
+        
         <div class="footer">
             <div>
                 <strong>Copyright</strong> Surya Sumatera &copy; <?php echo date('Y')?>
