@@ -14,7 +14,7 @@ class mdl extends CI_Model {
 
     public function checkAccount($username,$password) {
         
-        $sql   = "SELECT * from user where username ='" . $username . "' and password = '$password'";
+        $sql   = "SELECT * from tblm_user where username ='" . $username . "' and password = '$password'";
         $query = $this->db->query($sql);
         
         
