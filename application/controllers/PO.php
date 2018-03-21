@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Login extends CI_Controller {
+class PO extends CI_Controller {
     
     function __construct() {
         parent::__construct();
@@ -14,10 +14,17 @@ class Login extends CI_Controller {
         
     }
     
-    public function index() {
 
-        
+    public function pilihPO() {
+
+        if (!(isset($this->session->userdata['logged_in']))) {
+
+            redirect('Main');
+
+        } else {
+            $this->load->view('pilihPO');    
+        }
+
     }
-    
-    
+
 }
