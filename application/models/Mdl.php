@@ -54,8 +54,6 @@ class mdl extends CI_Model {
         }
     }
 
-    /////////////////////
-
     public function listCustomer(){
         
         $hasil = $this->db->query("SELECT * FROM tblm_customer");
@@ -112,9 +110,32 @@ class mdl extends CI_Model {
         
         return $query->result();
 
+    }
+
     public function listPegawai(){
         
         $hasil = $this->db->query("SELECT * FROM tblm_user");
+        if($hasil->num_rows() > 0){
+            return $hasil->result();
+        } else{
+            return array();
+        }
+    }
+
+    public function listProdukDetail(){
+        
+        $hasil = $this->db->query("SELECT * FROM tblm_produkheader a LEFT JOIN tblm_produkdetail b ON a.idProdukHeader = b.idProdukHeader");
+        if($hasil->num_rows() > 0){
+            return $hasil->result();
+        } else{
+            return array();
+        }
+
+    }
+
+    public function findProdukDetail($idProdukHeader){
+        
+        $hasil = $this->db->query("SELECT * FROM tblm_produkheader a LEFT JOIN tblm_produkdetail b ON a.idProdukHeader = b.idProdukHeader WHERE a.idProdukHeader = $idProdukHeader");
         if($hasil->num_rows() > 0){
             return $hasil->result();
         } else{

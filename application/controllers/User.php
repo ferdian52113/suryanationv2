@@ -29,7 +29,7 @@ class User extends CI_Controller {
     }
 
     public function editPegawai($idUser) {
-        print_r($_FILES['userfile']['name']);exit();
+
         if (isset($_FILES['userfile']['name'])&&!empty($_FILES['userfile']['name'])) {
             $config['upload_path']   = './uploads/fotoUser/';
             $config['allowed_types'] = 'jpg|png|bmp';
