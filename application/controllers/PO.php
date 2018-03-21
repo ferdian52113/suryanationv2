@@ -249,5 +249,22 @@ class PO extends CI_Controller
         
         
     }
+
+    public function list() {
+
+        $data['listPO'] = $this->mdl->getListPO();
+        $this->load->view('listPO',$data);
+
+    }
+
+    public function invoice($idPOHeader) {
+        $data["dataPO"] = $this->mdl->getPO($idPOHeader);
+        $this->load->view('invoicePO',$data);
+    }
+
+    public function print($idPOHeader) {
+        $data["dataPO"] = $this->mdl->getPO($idPOHeader);
+        $this->load->view('printPO',$data);
+    }
     
 }

@@ -23,26 +23,8 @@
                     <a href="#"><i class="fa fa-edit"></i> <span class="nav-label">Administration</span><span class="fa arrow"></span></a> 
                     <ul class="nav nav-second-level"> 
                         <li><a href="<?php echo base_url();?>user/administration">Beranda</a></li> 
-                        <li> 
-                            <a href="#">Purchase Order <span class="fa arrow"></span></a> 
-                            <ul class="nav nav-third-level"> 
-                                <li> 
-                                    <a href="<?php echo base_url();?>user/purchaseOrder">PO Tempahan</a> 
-                                </li> 
-                                <li> 
-                                    <a href="<?php echo base_url();?>user/listPOMasal">PO Masal</a> 
-                                </li> 
-                                <li> 
-                                    <a href="<?php echo base_url();?>user/listPOPerak">PO Perak</a> 
-                                </li> 
-                                <li> 
-                                    <a href="<?php echo base_url();?>user/listPOService">PO Service</a> 
-                                </li> 
-                                <li> 
-                                    <a href="<?php echo base_url();?>user/listPOTrading">PO Trading</a> 
-                                </li> 
-                            </ul> 
-                        </li> 
+                        <li><a href="<?php echo base_url();?>PO/list">Purchase Order</a></li> 
+                       
                         <li><a href="<?php echo base_url();?>user/trackPO">Track PO</a></li> 
                         <li> 
                             <a href="#">Surat Perintah Kerja <span class="fa arrow"></span></a> 

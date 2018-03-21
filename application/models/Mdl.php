@@ -96,4 +96,20 @@ class mdl extends CI_Model {
         }
     }
 
+    public function getListPO() {
+
+        $sql   = "SELECT *, DATE_FORMAT(a.tanggalMasuk,'%d %M %Y') as tglmsk from tblt_poheader a, tblt_podetail b, tblm_produkheader c, tblm_produkdetail d, tblm_customer e where a.idPOHeader = b.idPOHeader and c.idProdukHeader = d.idProdukHeader and a.idProdukHeader = c.idProdukHeader and a.idCustomer = e.idCustomer order by a.tanggalMasuk desc ";
+        $query = $this->db->query($sql);
+        
+        return $query->result();
+    }
+
+    public function getPO($idPOHeader) {
+
+        $sql   = "SELECT *, DATE_FORMAT(a.tanggalMasuk,'%d %M %Y') as tglmsk from tblt_poheader a, tblt_podetail b, tblm_produkheader c, tblm_produkdetail d, tblm_customer e, tblt_gambarproduk f, tblm_user g where a.idPOHeader = b.idPOHeader and c.idProdukHeader = d.idProdukHeader and a.idProdukHeader = c.idProdukHeader and a.idCustomer = e.idCustomer and c.idProdukHeader = f.idProdukHeader and a.idSalesPerson = g.idUser and a.idPOHeader = $idPOHeader ";
+        $query = $this->db->query($sql);
+        
+        return $query->result();
+    }
+
 }
