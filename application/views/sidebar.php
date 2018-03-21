@@ -13,7 +13,7 @@
                 <li> 
                     <a href="#"><i class="fa fa-th-large"></i> <span class="nav-label">Status Produksi</span><span class="fa arrow"></span></a> 
                     <ul class="nav nav-second-level"> 
-                        <li><a href="<?php echo base_url();?>user/kanban">Kanban Tempahan</a></li>
+                        <li><a href="<?php echo base_url();?>Kanban/tempahan">Kanban Tempahan</a></li>
                         <li><a href="<?php echo base_url();?>user/kanbanMassal">Kanban Massal</a></li> 
                         <li><a href="<?php echo base_url();?>user/kanbanService">Kanban Service</a></li> 
                         <li><a href="<?php echo base_url();?>user/kanbanService">Kanban Perak</a></li> 
@@ -23,26 +23,11 @@
                     <a href="#"><i class="fa fa-edit"></i> <span class="nav-label">Administration</span><span class="fa arrow"></span></a> 
                     <ul class="nav nav-second-level"> 
                         <li><a href="<?php echo base_url();?>user/administration">Beranda</a></li> 
-                        <li><a href="<?php echo base_url();?>PO/list">Purchase Order</a></li> 
+                        <li><a href="<?php echo base_url();?>PO/listPO">Purchase Order</a></li> 
                        
-                        <li><a href="<?php echo base_url();?>user/trackPO">Track PO</a></li> 
-                        <li> 
-                            <a href="#">Surat Perintah Kerja <span class="fa arrow"></span></a> 
-                            <ul class="nav nav-third-level"> 
-                                <li> 
-                                    <a href="<?php echo base_url();?>user/spk">SPK Tempahan</a> 
-                                </li> 
-                                <li> 
-                                    <a href="<?php echo base_url();?>user/listSPKMasal">SPK Masal</a> 
-                                </li> 
-                                <li> 
-                                    <a href="<?php echo base_url();?>user/listSPKPerak">SPK Perak</a> 
-                                </li> 
-                                <li> 
-                                    <a href="<?php echo base_url();?>user/listSPKService">SPK Service</a> 
-                                </li> 
-                            </ul> 
-                        </li> 
+                        <li><a href="<?php echo base_url();?>user/trackPO">Track PO</a></li>
+                        <li><a href="<?php echo base_url();?>user/trackPO">Surat Perintah Kerja</a></li> 
+              
                         <li>
                             <a href="#">Invoice Customer <span class="fa arrow"></span></a>
                             <ul class="nav nav-third-level"> 

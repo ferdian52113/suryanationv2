@@ -115,7 +115,7 @@
                             <div class="row">
                                 <div class="col-lg-12">
                                     <div class="m-b-md">
-                                        <a href="<?php echo base_url()?>PO/print/<?php echo $idPO?>" target="_blank" class="btn btn-primary btn-xs pull-right"><i class="fa fa-print"></i> Print RFQ</a>
+                                        <a href="<?php echo base_url()?>PO/printPO/<?php echo $idPO?>" target="_blank" class="btn btn-primary btn-xs pull-right"><i class="fa fa-print"></i> Print RFQ</a>
                                         <h2><?php echo $namaProduk ?></h2>
                                     </div>
                                 </div>
