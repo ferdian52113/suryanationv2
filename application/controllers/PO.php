@@ -28,7 +28,7 @@ class PO extends CI_Controller {
 
     }
 
-    public function createPO($kategori) {
+    public function createPO($kategori,$idCustomer) {
 
         if (!(isset($this->session->userdata['logged_in']))) {
 
@@ -36,8 +36,25 @@ class PO extends CI_Controller {
 
         } else {
             
-            
-            
+            if($kategori == 'tempahan') {
+
+                if($idCustomer == '0') {
+
+                    $data['idc'] = 0;
+
+                } else {
+
+                    $data['customer'] = $this->mdl->getCustomer($idCustomer);
+                    $data['idc'] = 1;
+
+                }
+
+                $data['pegawai'] = $this->mdl->listPegawaiSales();
+                $data['poTerakhir'] = $this->mdl->poTerakhir();
+                $this->load->view('user/createPurchaseOrder',$data);
+
+            }
+
         }
 
     }

@@ -60,16 +60,19 @@
                             <h5>Buat Purchase Order <small>Isi semua data yang dibutuhkan.</small></h5>
                         </div>
                         <div class="ibox-content">
-                            <?php echo form_open_multipart('user/tambahPO','class="form-horizontal"')?>
+                            <?php echo form_open_multipart('PO/tambahPO','class="form-horizontal"')?>
                                 <div class="form-group">
                                     <div class="col-sm-12">
                                         <div class="row">
                                             <div class="col-md-12">
                                                 <label>Nomor PO</label><br>
+
                                                 <?php if(count($poTerakhir)>0) { ?>
                                                 <small>Nomor Purchase Order terakhir yang digunakan adalah <strong> <?php echo $poTerakhir[0]->nomorPO; ?></strong></small>
                                                 <?php } ?>
+                                                
                                                 <input type="text" placeholder="Nomor PO" name="nomorPO" class="form-control" value="<?php echo set_value('nomorPO'); ?>" required="">
+                                                
                                                 <small class="text-danger"><?php echo form_error('nomorPO'); ?></small>
                                             </div>
                                         </div>
@@ -80,7 +83,7 @@
                                         <div class="row">
                                             <div class="col-md-6">
                                                 <label>Nama Konsumen</label>
-                                                <?php if($id['idC']==0){ ?>
+                                                <?php if($id['idC'] == 0){ ?>
                                                     <input type="text" placeholder="Nama Konsumen" name="namaCustomer" class="form-control" value="<?php echo set_value('namaCustomer'); ?>" required="">
                                                     <input type="hidden" name="idCustomer" class="form-control" value="0">
                                                 <?php } else { ?>

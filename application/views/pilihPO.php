@@ -200,7 +200,7 @@
                                         </div>
                                         <div class="col-lg-12">
                                             <div class="hr-line-dashed"></div>
-                                            <a class="btn btn-sm btn-warning pull-right m-t-n-xs" href="<?php echo base_url('PO/CreatePO/tempahan') ?>" ><strong>Lanjutkan</strong></a>
+                                            <a class="btn btn-sm btn-warning pull-right m-t-n-xs" href="<?php echo base_url('PO/CreatePO/tempahan/0') ?>" ><strong>Lanjutkan</strong></a>
                                         </div>
                                         
                                     </div>

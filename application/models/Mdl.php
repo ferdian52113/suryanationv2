@@ -56,4 +56,14 @@ class mdl extends CI_Model {
         }
     }
 
+    public function getCustomer($idCustomer){
+        //Query mencari record berdasarkan ID
+        $hasil = $this->db->query("SELECT * FROM customer WHERE idCustomer=$idCustomer");
+        if($hasil->num_rows() > 0){
+            return $hasil->result();
+        } else{
+            return array();
+        }
+    }
+
 }
