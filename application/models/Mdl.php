@@ -66,4 +66,14 @@ class mdl extends CI_Model {
         }
     }
 
+    public function listPegawai(){
+        
+        $hasil = $this->db->query("SELECT * FROM tblm_user");
+        if($hasil->num_rows() > 0){
+            return $hasil->result();
+        } else{
+            return array();
+        }
+    }
+
 }
