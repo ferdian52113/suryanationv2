@@ -8,7 +8,13 @@
 
     <title>Surya Sumatera | Administration</title>
 
-    <?php include('header.php'); ?>
+    <link href="<?php echo base_url();?>assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="<?php echo base_url();?>assets/font-awesome/css/font-awesome.css" rel="stylesheet">
+    <link href="<?php echo base_url();?>assets/css/plugins/iCheck/custom.css" rel="stylesheet">
+    <link href="<?php echo base_url();?>assets/css/animate.css" rel="stylesheet">
+    <link href="<?php echo base_url();?>assets/css/style.css" rel="stylesheet">
+
+    <link href="<?php echo base_url();?>assets/css/plugins/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.css" rel="stylesheet">
 
 </head>
 
@@ -68,7 +74,7 @@
                                                 <label>Nomor PO</label><br>
 
                                                 <?php if(count($poTerakhir)>0) { ?>
-                                                <small>Nomor Purchase Order terakhir yang digunakan adalah <strong> <?php echo $poTerakhir[0]->nomorPO; ?></strong></small>
+                                                <small>Nomor Purchase Order terakhir yang digunakan adalah <strong> <?php echo $poTerakhir[0]->nomorPO; ?></strong></small><br>
                                                 <?php } ?>
                                                 
                                                 <input type="text" placeholder="Nomor PO" name="nomorPO" class="form-control" value="<?php echo set_value('nomorPO'); ?>" required="">
@@ -83,7 +89,7 @@
                                         <div class="row">
                                             <div class="col-md-6">
                                                 <label>Nama Konsumen</label>
-                                                <?php if($id['idC'] == 0){ ?>
+                                                <?php if($idc == 0){ ?>
                                                     <input type="text" placeholder="Nama Konsumen" name="namaCustomer" class="form-control" value="<?php echo set_value('namaCustomer'); ?>" required="">
                                                     <input type="hidden" name="idCustomer" class="form-control" value="0">
                                                 <?php } else { ?>
@@ -93,7 +99,7 @@
                                             </div>
                                             <div class="col-md-6">
                                                 <label>Nomor Telepon</label>
-                                                <?php if($id['idC']==0){ ?>
+                                                <?php if($idc == 0){ ?>
                                                     <input type="text" placeholder="Nomor Telepon" name="nomorTelepon" class="form-control" value="<?php echo set_value('nomorTelepon'); ?>" required="">
                                                 <?php } else { ?>
                                                     <input type="text" placeholder="Nomor Telepon" name="nomorTelepon" class="form-control" value="<?php echo $customer[0]->nomorTelepon; ?>" readonly>

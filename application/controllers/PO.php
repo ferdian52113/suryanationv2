@@ -49,14 +49,20 @@ class PO extends CI_Controller {
 
                 }
 
-                $data['pegawai'] = $this->mdl->listPegawaiSales();
-                $data['poTerakhir'] = $this->mdl->poTerakhir();
-                $this->load->view('user/createPurchaseOrder',$data);
+                $data['pegawai'] = $this->mdl->getPegawaiByLevel(1);
+                $data['poTerakhir'] = $this->mdl->getLastPO();
+                $this->load->view('createPOTempahan',$data);
 
             }
 
         }
 
+    }
+
+    public function convertPO () {
+        $idCustomer=$this->input->post('idCustomer');
+        $kategori=$this->input->post('kategori');
+        redirect('PO/createPO/'.$kategori.'/'.$idCustomer);
     }
 
 }

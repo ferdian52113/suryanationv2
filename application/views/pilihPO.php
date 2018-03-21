@@ -151,7 +151,7 @@
                             <div class="modal-body">
                                 <div class="row">
                                     <div class="col-sm-6 b-r">
-                                        <?php echo form_open_multipart('user/convertTempahan','class="form-horizontal"')?>
+                                        <?php echo form_open_multipart('PO/convertPO','class="form-horizontal"')?>
                                         <h3 class="m-t-none m-b">Pelanggan Lama</h3>
                                         <p>Purchase Order dari pelanggan yang sudah pernah melakukan pembelian.</p>
                                         <div id="idCustomer" class="selectpicker" data-live="true">
@@ -184,6 +184,7 @@
                                                 </div>
                                             </div>
                                             <input type="hidden" name="idCustomer" value="0" required="">
+                                            <input type="hidden" name="kategori" value="tempahan" required="">
                                         </div>
                                         <div class="col-lg-12">
                                             <div class="hr-line-dashed"></div>
