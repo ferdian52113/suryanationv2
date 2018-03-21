@@ -44,6 +44,16 @@ class mdl extends CI_Model {
         $this->db->update($table, $data);
     }
 
+    public function insertDataGetLast($table, $data) {
+        $this->db->insert($table, $data);
+
+        if($this->db->affected_rows()){ 
+            return $this->db->insert_id(); 
+        }else{ 
+            return false; 
+        }
+    }
+
     /////////////////////
 
     public function listCustomer(){

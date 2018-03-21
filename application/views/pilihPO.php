@@ -184,7 +184,7 @@
                                                 </div>
                                             </div>
                                             <input type="hidden" name="idCustomer" value="0" required="">
-                                            <input type="hidden" name="kategori" value="tempahan" required="">
+                                            <input type="hidden" name="kategori" value="701" required="">
                                         </div>
                                         <div class="col-lg-12">
                                             <div class="hr-line-dashed"></div>
@@ -201,7 +201,7 @@
                                         </div>
                                         <div class="col-lg-12">
                                             <div class="hr-line-dashed"></div>
-                                            <a class="btn btn-sm btn-warning pull-right m-t-n-xs" href="<?php echo base_url('PO/CreatePO/tempahan/0') ?>" ><strong>Lanjutkan</strong></a>
+                                            <a class="btn btn-sm btn-warning pull-right m-t-n-xs" href="<?php echo base_url('PO/CreatePO/701/0') ?>" ><strong>Lanjutkan</strong></a>
                                         </div>
                                         
                                     </div>
