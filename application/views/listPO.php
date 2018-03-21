@@ -85,6 +85,7 @@
                                     <th class="text-center">Nama Konsumen</th>
                                     <th class="text-center">Jenis Produk</th>
                                     <th class="text-center">Nama Produk</th>
+                                    <th class="text-center">Kategori Produk</th>
                                     <th class="text-center" data-hide="phone,tablet">Action</th>
                                 </tr>
                                 </thead>
@@ -98,6 +99,7 @@
                                     <td class="text-center"><?php echo $hasil->namaCustomer?></td>
                                     <td class="text-center"><?php echo $hasil->jenisProduk?></td>
                                     <td class="text-center"><?php echo $hasil->namaProduk?></td>
+                                    <td class="text-center"><?php echo $hasil->namaKategoriProduksi ?></td>
                                     
                                     <td class="text-center">
                                         <?=anchor('PO/invoice/' . $hasil->idPOHeader, 'Lihat', [
@@ -111,7 +113,7 @@
                                 </tbody>
                                 <tfoot>
                                 <tr>
-                                    <td colspan="6">
+                                    <td colspan="7">
                                         <ul class="pagination pull-right"></ul>
                                     </td>
                                 </tr>

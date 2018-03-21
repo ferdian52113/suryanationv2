@@ -246,11 +246,10 @@ class PO extends CI_Controller
                 
             }
         }
-        
-        
+              
     }
 
-    public function list() {
+    public function listPO() {
 
         $data['listPO'] = $this->mdl->getListPO();
         $this->load->view('listPO',$data);
@@ -262,7 +261,7 @@ class PO extends CI_Controller
         $this->load->view('invoicePO',$data);
     }
 
-    public function print($idPOHeader) {
+    public function printPO($idPOHeader) {
         $data["dataPO"] = $this->mdl->getPO($idPOHeader);
         $this->load->view('printPO',$data);
     }
