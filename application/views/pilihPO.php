@@ -504,6 +504,11 @@
 
     <?php include('footer.php') ?>
 
+    <script src="<?php echo base_url();?>assets/js/tabcomplete.min.js"></script>
+    <script src="<?php echo base_url();?>assets/js/livefilter.min.js"></script>
+    <script src="<?php echo base_url();?>assets/js/bootstrap-select.js"></script>
+
+
 
 </body>
 

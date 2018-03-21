@@ -44,4 +44,16 @@ class mdl extends CI_Model {
         $this->db->update($table, $data);
     }
 
+    /////////////////////
+
+    public function listCustomer(){
+        
+        $hasil = $this->db->query("SELECT * FROM tblm_customer");
+        if($hasil->num_rows() > 0){
+            return $hasil->result();
+        } else{
+            return array();
+        }
+    }
+
 }

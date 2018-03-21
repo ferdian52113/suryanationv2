@@ -22,7 +22,8 @@ class PO extends CI_Controller {
             redirect('Main');
 
         } else {
-            $this->load->view('pilihPO');    
+            $data['listCustomer'] = $this->mdl->listCustomer();
+            $this->load->view('pilihPO',$data);    
         }
 
     }
