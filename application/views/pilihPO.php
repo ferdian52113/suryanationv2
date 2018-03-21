@@ -8,7 +8,13 @@
 
     <title>Surya Sumatera | Administration</title>
 
-    <?php include('header.php'); ?>
+    <link href="<?php echo base_url();?>assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="<?php echo base_url();?>assets/font-awesome/css/font-awesome.css" rel="stylesheet">
+    <link href="<?php echo base_url();?>assets/css/plugins/iCheck/custom.css" rel="stylesheet">
+    <link href="<?php echo base_url();?>assets/css/animate.css" rel="stylesheet">
+    <link href="<?php echo base_url();?>assets/css/style.css" rel="stylesheet">
+
+    <link href="<?php echo base_url();?>assets/css/plugins/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.css" rel="stylesheet">
 
 </head>
 
@@ -54,7 +60,9 @@
             </div>
         <div class="wrapper wrapper-content animated fadeInRight">
             <div class="row">
-                <div class="col-md-3">
+                <br><br><br><br><br><br><br><br>    
+                <div class="col-lg-1">&nbsp</div>
+                <div class="col-lg-2">
                     <a type="button" data-toggle="modal" data-target="#tempahan">
                         <div class="ibox">
                             <div class="ibox-content product-box">
@@ -63,13 +71,13 @@
                                     <img src="<?php echo base_url();?>assets/img/tempahan.jpg" style="object-fit: cover; width: 100%;" >
                                 </div>
                                 <div class="product-desc">
-                                    <h2 class="product-name text-center" style="font-size: 30px;"> TEMPAHAN</h2>
+                                    <h3 class="product-name text-center" style="font-size: 20px;"> TEMPAHAN</h3>
                                 </div>
                             </div>
                         </div>
                     </a>
                 </div>
-                <div class="col-md-3">
+                <div class="col-lg-2">
                     <a type="button" data-toggle="modal" data-target="#masal">
                         <div class="ibox">
                             <div class="ibox-content product-box">
@@ -78,13 +86,13 @@
                                     <img src="<?php echo base_url();?>assets/img/masal.jpg" style="object-fit: cover; width: 100%;" >
                                 </div>
                                 <div class="product-desc">
-                                    <h2 class="product-name text-center" style="font-size: 30px;"> MASAL</h2>
+                                    <h3 class="product-name text-center" style="font-size: 20px;"> MASAL</h3>
                                 </div>
                             </div>
                         </div>
                     </a>
                 </div>
-                <div class="col-md-3">
+                <div class="col-lg-2">
                     <a type="button" data-toggle="modal" data-target="#perak">
                         <div class="ibox">
                             <div class="ibox-content product-box">
@@ -93,13 +101,13 @@
                                     <img src="<?php echo base_url();?>assets/img/perak.jpg" style="object-fit: cover; width: 100%;" >
                                 </div>
                                 <div class="product-desc">
-                                    <h2 class="product-name text-center" style="font-size: 30px;"> PERAK</h2>
+                                    <h3 class="product-name text-center" style="font-size: 20px;"> PERAK</h3>
                                 </div>
                             </div>
                         </div>
                     </a>
                 </div>
-                <div class="col-md-3">
+                <div class="col-lg-2">
                     <a type="button" data-toggle="modal" data-target="#service">
                         <div class="ibox">
                             <div class="ibox-content product-box">
@@ -108,13 +116,13 @@
                                     <img src="<?php echo base_url();?>assets/img/service.jpg" style="object-fit: cover; width: 100%;" >
                                 </div>
                                 <div class="product-desc">
-                                    <h2 href="#" class="product-name text-center" style="font-size: 30px;"> SERVICE</h2>
+                                    <h3 href="#" class="product-name text-center" style="font-size: 20px;"> SERVICE</h3>
                                 </div>
                             </div>
                         </div>
                     </a>
                 </div>
-                <div class="col-md-3">
+                <div class="col-lg-2">
                     <a type="button" data-toggle="modal" data-target="#trading">
                         <div class="ibox">
                             <div class="ibox-content product-box">
@@ -123,12 +131,13 @@
                                     <img src="<?php echo base_url();?>assets/img/trading.jpg" style="object-fit: cover; width: 100%;" >
                                 </div>
                                 <div class="product-desc">
-                                    <h2 href="#" class="product-name text-center" style="font-size: 30px;"> TRADING</h2>
+                                    <h3 href="#" class="product-name text-center" style="font-size: 20px;"> TRADING</h3>
                                 </div>
                             </div>
                         </div>
                     </a>
                 </div>
+                <div class="col-lg-1">&nbsp</div>
 
                 <!-- Modal Tempahan -->
                 <div class="modal inmodal fade" id="tempahan" tabindex="-1" role="dialog"  aria-hidden="true">
@@ -176,24 +185,24 @@
                                             </div>
                                             <input type="hidden" name="idCustomer" value="0" required="">
                                         </div>
-                                        <div class="col-md-12">
+                                        <div class="col-lg-12">
                                             <div class="hr-line-dashed"></div>
                                             <button class="btn btn-sm btn-primary pull-right m-t-n-xs" type="submit"><strong>Lanjutkan</strong></button>
                                         </div>
                                         <?php echo form_close()?>
                                     </div>
                                     <div class="col-sm-6">
-                                        <?php echo form_open_multipart('user/convertTempahan','class="form-horizontal"')?>
-                                        <div class="col-md-12" style="height: 123px;">
+                                        
+                                        <div class="col-lg-12" style="height: 123px;">
                                             <h3 class="m-t-none m-b">Pelanggan Baru</h3>
                                             <p>Purchase Order dari pelanggan yang baru pertama kali melakukan pembelian.</p>
-                                            <input type="hidden" name="idCustomer" value="0">
+                                            
                                         </div>
-                                        <div class="col-md-12">
+                                        <div class="col-lg-12">
                                             <div class="hr-line-dashed"></div>
-                                            <button class="btn btn-sm btn-warning pull-right m-t-n-xs" type="submit"><strong>Lanjutkan</strong></button>
+                                            <a class="btn btn-sm btn-warning pull-right m-t-n-xs" href="<?php echo base_url('PO/CreatePO/tempahan') ?>" ><strong>Lanjutkan</strong></a>
                                         </div>
-                                        <?php echo form_close()?>
+                                        
                                     </div>
                                 </div>
                             </div>
@@ -248,7 +257,7 @@
                                             </div>
                                             <input type="hidden" name="idCustomer" value="0" required="">
                                         </div>
-                                        <div class="col-md-12">
+                                        <div class="col-lg-12">
                                             <div class="hr-line-dashed"></div>
                                             <button class="btn btn-sm btn-primary pull-right m-t-n-xs" type="submit"><strong>Lanjutkan</strong></button>
                                         </div>
@@ -256,12 +265,12 @@
                                     </div>
                                     <div class="col-sm-6">
                                         <?php echo form_open_multipart('user/convertMassal','class="form-horizontal"')?>
-                                        <div class="col-md-12" style="height: 123px;">
+                                        <div class="col-lg-12" style="height: 123px;">
                                             <h3 class="m-t-none m-b">Pelanggan Baru</h3>
                                             <p>Purchase Order dari pelanggan yang baru pertama kali melakukan pembelian.</p>
                                             <input type="hidden" name="idCustomer" value="0">
                                         </div>
-                                        <div class="col-md-12">
+                                        <div class="col-lg-12">
                                             <div class="hr-line-dashed"></div>
                                             <button class="btn btn-sm btn-warning pull-right m-t-n-xs" type="submit"><strong>Lanjutkan</strong></button>
                                         </div>
@@ -320,7 +329,7 @@
                                             </div>
                                             <input type="hidden" name="idCustomer" value="0" required="">
                                         </div>
-                                        <div class="col-md-12">
+                                        <div class="col-lg-12">
                                             <div class="hr-line-dashed"></div>
                                             <button class="btn btn-sm btn-primary pull-right m-t-n-xs" type="submit"><strong>Lanjutkan</strong></button>
                                         </div>
@@ -328,12 +337,12 @@
                                     </div>
                                     <div class="col-sm-6">
                                         <?php echo form_open_multipart('user/convertPerak','class="form-horizontal"')?>
-                                        <div class="col-md-12" style="height: 123px;">
+                                        <div class="col-lg-12" style="height: 123px;">
                                             <h3 class="m-t-none m-b">Pelanggan Baru</h3>
                                             <p>Purchase Order dari pelanggan yang baru pertama kali melakukan pembelian.</p>
                                             <input type="hidden" name="idCustomer" value="0">
                                         </div>
-                                        <div class="col-md-12">
+                                        <div class="col-lg-12">
                                             <div class="hr-line-dashed"></div>
                                             <button class="btn btn-sm btn-warning pull-right m-t-n-xs" type="submit"><strong>Lanjutkan</strong></button>
                                         </div>
@@ -392,7 +401,7 @@
                                             </div>
                                             <input type="hidden" name="idCustomer" value="0" required="">
                                         </div>
-                                        <div class="col-md-12">
+                                        <div class="col-lg-12">
                                             <div class="hr-line-dashed"></div>
                                             <button class="btn btn-sm btn-primary pull-right m-t-n-xs" type="submit"><strong>Lanjutkan</strong></button>
                                         </div>
@@ -400,12 +409,12 @@
                                     </div>
                                     <div class="col-sm-6">
                                         <?php echo form_open_multipart('user/createPOService','class="form-horizontal"')?>
-                                        <div class="col-md-12" style="height: 123px;">
+                                        <div class="col-lg-12" style="height: 123px;">
                                             <h3 class="m-t-none m-b">Pelanggan Baru</h3>
                                             <p>Purchase Order dari pelanggan yang baru pertama kali melakukan pembelian.</p>
                                             <input type="hidden" name="idCustomer" value="0">
                                         </div>
-                                        <div class="col-md-12">
+                                        <div class="col-lg-12">
                                             <div class="hr-line-dashed"></div>
                                             <button class="btn btn-sm btn-warning pull-right m-t-n-xs" type="submit"><strong>Lanjutkan</strong></button>
                                         </div>
@@ -464,7 +473,7 @@
                                             </div>
                                             <input type="hidden" name="idCustomer" value="0" required="">
                                         </div>
-                                        <div class="col-md-12">
+                                        <div class="col-lg-12">
                                             <div class="hr-line-dashed"></div>
                                             <button class="btn btn-sm btn-primary pull-right m-t-n-xs" type="submit"><strong>Lanjutkan</strong></button>
                                         </div>
@@ -472,12 +481,12 @@
                                     </div>
                                     <div class="col-sm-6">
                                         <?php echo form_open_multipart('user/convertTrading','class="form-horizontal"')?>
-                                        <div class="col-md-12" style="height: 123px;">
+                                        <div class="col-lg-12" style="height: 123px;">
                                             <h3 class="m-t-none m-b">Pelanggan Baru</h3>
                                             <p>Purchase Order dari pelanggan yang baru pertama kali melakukan pembelian.</p>
                                             <input type="hidden" name="idCustomer" value="0">
                                         </div>
-                                        <div class="col-md-12">
+                                        <div class="col-lg-12">
                                             <div class="hr-line-dashed"></div>
                                             <button class="btn btn-sm btn-warning pull-right m-t-n-xs" type="submit"><strong>Lanjutkan</strong></button>
                                         </div>
@@ -502,7 +511,26 @@
         </div>
         </div>
 
-    <?php include('footer.php') ?>
+    <!-- Mainly scripts -->
+    <script src="<?php echo base_url();?>assets/js/jquery-2.1.1.js"></script>
+    <script src="<?php echo base_url();?>assets/js/bootstrap.min.js"></script>
+    <script src="<?php echo base_url();?>assets/js/plugins/metisMenu/jquery.metisMenu.js"></script>
+    <script src="<?php echo base_url();?>assets/js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+
+    <!-- Custom and plugin javascript -->
+    <script src="<?php echo base_url();?>assets/js/inspinia.js"></script>
+    <script src="<?php echo base_url();?>assets/js/plugins/pace/pace.min.js"></script>
+
+    <!-- iCheck -->
+    <script src="<?php echo base_url();?>assets/js/plugins/iCheck/icheck.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.i-checks').iCheck({
+                checkboxClass: 'icheckbox_square-green',
+                radioClass: 'iradio_square-green',
+            });
+        });
+    </script>
 
     <script src="<?php echo base_url();?>assets/js/tabcomplete.min.js"></script>
     <script src="<?php echo base_url();?>assets/js/livefilter.min.js"></script>

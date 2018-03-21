@@ -28,4 +28,18 @@ class PO extends CI_Controller {
 
     }
 
+    public function createPO($kategori) {
+
+        if (!(isset($this->session->userdata['logged_in']))) {
+
+            redirect('Main');
+
+        } else {
+            
+            
+            
+        }
+
+    }
+
 }
