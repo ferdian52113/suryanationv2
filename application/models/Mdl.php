@@ -44,6 +44,16 @@ class mdl extends CI_Model {
         $this->db->update($table, $data);
     }
 
+    public function insertDataGetLast($table, $data) {
+        $this->db->insert($table, $data);
+
+        if($this->db->affected_rows()){ 
+            return $this->db->insert_id(); 
+        }else{ 
+            return false; 
+        }
+    }
+
     /////////////////////
 
     public function listCustomer(){
@@ -58,7 +68,27 @@ class mdl extends CI_Model {
 
     public function getCustomer($idCustomer){
         //Query mencari record berdasarkan ID
-        $hasil = $this->db->query("SELECT * FROM customer WHERE idCustomer=$idCustomer");
+        $hasil = $this->db->query("SELECT * FROM tblm_customer WHERE idCustomer=$idCustomer");
+        if($hasil->num_rows() > 0){
+            return $hasil->result();
+        } else{
+            return array();
+        }
+    }
+
+    public function getPegawaiByLevel($level){
+        //Query mencari record berdasarkan ID
+        $hasil = $this->db->query("SELECT * FROM tblm_user WHERE level = $level");
+        if($hasil->num_rows() > 0){
+            return $hasil->result();
+        } else{
+            return array();
+        }
+    }
+
+    public function getLastPO(){
+        //Query mencari record berdasarkan ID
+        $hasil = $this->db->query("SELECT * FROM tblt_poheader ORDER BY idPOHeader DESC LIMIT 1");
         if($hasil->num_rows() > 0){
             return $hasil->result();
         } else{
