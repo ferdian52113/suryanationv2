@@ -96,6 +96,7 @@ class mdl extends CI_Model {
         }
     }
 
+
     public function getListPO() {
 
         $sql   = "SELECT *, DATE_FORMAT(a.tanggalMasuk,'%d %M %Y') as tglmsk from tblt_poheader a, tblt_podetail b, tblm_produkheader c, tblm_produkdetail d, tblm_customer e where a.idPOHeader = b.idPOHeader and c.idProdukHeader = d.idProdukHeader and a.idProdukHeader = c.idProdukHeader and a.idCustomer = e.idCustomer order by a.tanggalMasuk desc ";
@@ -110,6 +111,16 @@ class mdl extends CI_Model {
         $query = $this->db->query($sql);
         
         return $query->result();
+
+    public function listPegawai(){
+        
+        $hasil = $this->db->query("SELECT * FROM tblm_user");
+        if($hasil->num_rows() > 0){
+            return $hasil->result();
+        } else{
+            return array();
+        }
+
     }
 
 }
